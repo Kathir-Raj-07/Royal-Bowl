@@ -118,7 +118,7 @@ function showToast(message) {
     document.body.appendChild(toast);
     setTimeout(() => toast.remove(), 2000);
 }
-
+//place order
 function placeOrder() {
     if (cart.length === 0) {
         alert("Your cart is empty!");
