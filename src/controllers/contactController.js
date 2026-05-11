@@ -16,13 +16,13 @@ exports.sendContactEmail = async (req, res) => {
         await transporter.sendMail({
             from: email,
             to: process.env.OWNER_EMAIL,
-            subject: "New Contact Message - Janu Kitchen",
+            subject: "New Contact Message",
             text: `From: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
         });
 
-        res.json({ success: true, message: "Email sent successfully" });
+        res.json({ success: true, message: "Email sent successfully..." });
     } catch (error) {
         console.error("Error sending email:", error);
-        res.status(500).json({ success: false, message: "Failed to send email" });
+        res.status(500).json({ success: false, message: "Failed to send a email" });
     }
 };
