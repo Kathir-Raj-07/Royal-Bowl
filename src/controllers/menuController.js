@@ -7,7 +7,7 @@ exports.getMenu = (req, res) => {
     db.all(customQuery, params, (err, rows) => {
         if (err) {
             console.error("Error fetching menu:", err);
-            return res.status(500).json({ error: "Database error" });
+            return res.status(500).json({ error: "Database error..." });
         }
         res.json(rows);
     });
