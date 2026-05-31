@@ -48,7 +48,7 @@ exports.placeOrder = (req, res) => {
                         console.error("❌ Order items insert failed:", finErr.message);
                         return res.status(500).json({ error: "Order saved but items failed: " + finErr.message });
                     }
-                    console.log(`✅ Order #${orderId} placed — ${items.length} item(s) — ₹${safeTotal}`);
+                    console.log(`✅ Order #${orderId} placed!! — ${items.length} item(s) — ₹${safeTotal}`);
                     res.status(201).json({ message: "Order placed successfully!", orderId });
                 });
             }
